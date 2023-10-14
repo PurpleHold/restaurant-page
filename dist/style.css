@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: url(./main-bg-2.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+#content::before {
+    content: "";
+    background-color: #38302629;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+#content .menu, #content .titlecard {
+    z-index: 99;
+}
+.menu ul {
+    display: flex;
+    gap: 3rem;
+    background: #15003d;
+    color: #ffbbbb;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 2rem 2rem 4rem 2rem;
+}
+.menu ul li {
+    border-top: 1px solid #ffbbbb;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s;
+}
+.menu ul li:hover {
+    background: #ffbbbb;
+    color: #15003d;
+    cursor: pointer;
+    rotate: 4deg;
+    border-radius: 0 15px 0 15px;
+}
+.titlecard {
+    align-self: center;
+    background: #ffbbbb;
+    padding: 4rem;
+    border-radius: 0 55px 0 55px;
+    margin-top: -2rem;
+    rotate: 4deg;
+}
+.titlecard h1, .titlecard h2 {
+    rotate: -4deg;
+}
+.titlecard h1 {
+    font-size: 5rem;
+    color: #15003d;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+.titlecard h2 {
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+}
+.titlecard h1 span {
+    color: #c52945;
+    font-size: 8rem;
+    position: relative;
+    top: -0.75rem;
+    padding: 0;
+    margin: 0;
+}
