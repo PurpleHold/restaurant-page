@@ -25,7 +25,7 @@ body {
 .menu ul {
     display: flex;
     gap: 3rem;
-    background: #15003d;
+    background: #230225;
     color: #ffbbbb;
     justify-content: center;
     list-style: none;
@@ -41,7 +41,7 @@ body {
 }
 .menu ul li:hover {
     background: #ffbbbb;
-    color: #15003d;
+    color: #230225;
     cursor: pointer;
     rotate: 4deg;
     border-radius: 0 15px 0 15px;
@@ -59,7 +59,7 @@ body {
 }
 .titlecard h1 {
     font-size: 5rem;
-    color: #15003d;
+    color: #230225;
     margin: 0;
     border-bottom: 1px solid black;
 }
@@ -69,10 +69,39 @@ body {
     font-size: 1.25rem;
 }
 .titlecard h1 span {
-    color: #c52945;
+    color: #b7024a;
     font-size: 8rem;
     position: relative;
     top: -0.75rem;
     padding: 0;
     margin: 0;
+}
+
+/* Styles for other tabs */
+
+#content.food, #content.info {
+    display: grid;
+    grid-template-areas: "menu menu"
+        "titlecard food-list";
+    grid-template-columns: 1fr 3fr;
+    gap: 0;
+}
+.menu.food, .menu.info { 
+   grid-area: menu;
+}
+.titlecard.side {
+    rotate: none;
+    padding: 3rem;
+    border-radius: 0;
+    height: inherit;
+    grid-area: titlecard;
+}
+.titlecard.side h1 {
+    line-height: 4.5rem;
+    padding-bottom: 1rem;
+}
+.food-list, .contact-info {
+    grid-area: food-list;
+    background: #fff;
+    padding: 3rem;
 }
